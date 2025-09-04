@@ -61,7 +61,7 @@
         }
         
         .logo-image {
-            height: 60px; /* Increased logo size */
+            height: 60px;
             width: auto;
             object-fit: contain;
         }
@@ -422,16 +422,16 @@
             background-color: var(--secondary);
         }
         
-        .map {
+        .map-container {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            height: 400px;
         }
         
-        .map iframe {
+        #map {
             width: 100%;
             height: 100%;
-            min-height: 350px;
             border: none;
         }
         
@@ -712,15 +712,31 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Get in touch with us for any inquiries about our parts or vehicles.</p>
+            <p style="text-align: center; margin-bottom: 30px;">We have two convenient locations to serve you. Get in touch with us for any inquiries about our parts or vehicles.</p>
             
             <div class="contact-container">
                 <div id="contact-info" class="contact-info">
-                    <!-- Contact info will be loaded by JavaScript -->
+                    <h3>Our Information</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Main Branch:</strong> 16 Seafield Leonora, West Coast Demerara Guyana</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (555) 639-7019</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Second Branch:</strong> 123 Auto Road, Motor City</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (555) 642-5072</p>
+                        <p><i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> (555) 642-5072</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@starcarsauto.com</p>
+                    </div>
+                    
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/starcarsauto" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/5559876543" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com/@starcarsauto" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com/starcarsauto" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304613!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1685111691328!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-container">
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -826,6 +842,9 @@
             </div>
         </form>
     </div>
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 
     <!-- JSON Loading and Gallery JavaScript -->
     <script>
@@ -955,9 +974,21 @@
             } else if (url.includes('contact.json')) {
                 return {
                     company: "Star Cars Motor Spares & Auto Sales",
-                    address: "123 Auto Road, Motor City",
-                    phone: "(555) 123-4567",
-                    mobile: "(555) 987-6543",
+                    branches: [
+                        {
+                            name: "Main Branch",
+                            address: "16 Seafield Leonora, West Coast Demerara Guyana",
+                            phone: "(555) 639-7019",
+                            coordinates: { lat: 6.6849, lng: -58.2970 }
+                        },
+                        {
+                            name: "Second Branch",
+                            address: "123 Auto Road, Motor City",
+                            phone: "(555) 642-5072",
+                            coordinates: { lat: 6.8130, lng: -58.1570 }
+                        }
+                    ],
+                    mobile: "(555) 642-5072",
                     email: "info@starcarsauto.com",
                     social: {
                         facebook: "https://www.facebook.com/starcarsauto",
@@ -1012,11 +1043,16 @@
             const contactInfo = document.getElementById('contact-info');
             if (!contactInfo) return;
             
+            // Create branches HTML
+            const branchesHTML = contact.branches.map(branch => `
+                <p><i class="fas fa-map-marker-alt"></i> <strong>${branch.name}:</strong> ${branch.address}</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> ${branch.phone}</p>
+            `).join('');
+            
             contactInfo.innerHTML = `
                 <h3>Our Information</h3>
                 <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> ${contact.address}</p>
-                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> ${contact.phone}</p>
+                    ${branchesHTML}
                     <p><i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> ${contact.mobile}</p>
                     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ${contact.email}</p>
                 </div>
@@ -1029,6 +1065,99 @@
                     <a href="${contact.social.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             `;
+        }
+
+        // Initialize Google Map with both locations
+        function initMap() {
+            // Default center (average of both locations)
+            const center = { lat: 6.749, lng: -58.227 };
+            
+            // Create map
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: center,
+                styles: [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#444444"}]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{"color": "#f2f2f2"}]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [{"saturation": -100}, {"lightness": 45}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "simplified"}]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{"color": "#4f595d"}, {"visibility": "on"}]
+                    }
+                ]
+            });
+            
+            // Add markers for both branches
+            const branches = [
+                {
+                    position: { lat: 6.6849, lng: -58.2970 },
+                    title: "Main Branch",
+                    address: "16 Seafield Leonora, West Coast Demerara Guyana"
+                },
+                {
+                    position: { lat: 6.8130, lng: -58.1570 },
+                    title: "Second Branch",
+                    address: "123 Auto Road, Motor City"
+                }
+            ];
+            
+            branches.forEach(branch => {
+                const marker = new google.maps.Marker({
+                    position: branch.position,
+                    map: map,
+                    title: branch.title,
+                    icon: {
+                        url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                    }
+                });
+                
+                // Add info window for each marker
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div style="padding: 10px;">
+                            <h3 style="margin: 0 0 10px; color: #003884;">${branch.title}</h3>
+                            <p style="margin: 0;">${branch.address}</p>
+                        </div>
+                    `
+                });
+                
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+            });
         }
 
         // Gallery functionality
@@ -1044,12 +1173,17 @@
             currentSlideIndex = 0;
             
             const gallerySlides = document.getElementById('gallerySlides');
-            gallerySlides.innerHTML = vehicle.images.map((img, index) => `
-                <div class="gallery-slide ${index === 0 ? 'active' : ''}">
-                    <img src="${img}" class="gallery-image" alt="${vehicle.make} ${vehicle.model} - Image ${index + 1}">
-                </div>
-            `).join('');
+            gallerySlides.innerHTML = '';
             
+            // Create slides for each image
+            vehicle.images.forEach((image, index) => {
+                const slide = document.createElement('div');
+                slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `<img src="${image}" class="gallery-image" alt="${vehicle.make} ${vehicle.model}">`;
+                gallerySlides.appendChild(slide);
+            });
+            
+            // Show the gallery modal
             document.getElementById('galleryModal').style.display = 'block';
         }
 
@@ -1077,68 +1211,93 @@
             slides[currentSlideIndex].classList.add('active');
         }
 
-        // Admin panel functionality
-        function toggleAdminPanel() {
-            const adminPanel = document.getElementById('adminPanel');
-            adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
-        }
+        // Global variables to store data
+        let vehiclesData = [];
 
-        // Logo upload preview
-        function setupLogoUpload() {
+        // Load all data when the page is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load parts data
+            loadJSON('data/parts.json')
+                .then(data => {
+                    displayParts(data.parts);
+                });
+
+            // Load vehicles data
+            loadJSON('data/vehicles.json')
+                .then(data => {
+                    vehiclesData = data.vehicles;
+                    displayVehicles(data.vehicles);
+                });
+
+            // Load contact data
+            loadJSON('data/contact.json')
+                .then(data => {
+                    displayContact(data);
+                });
+
+            // Setup gallery event listeners
+            document.getElementById('closeGallery').addEventListener('click', closeGallery);
+            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
+            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
+            
+            // Close gallery when clicking outside the image
+            document.getElementById('galleryModal').addEventListener('click', function(e) {
+                if (e.target === this) closeGallery();
+            });
+
+            // Admin panel functionality
+            const adminToggle = document.getElementById('adminToggle');
+            const adminPanel = document.getElementById('adminPanel');
+            const closeAdmin = document.getElementById('closeAdmin');
             const logoUpload = document.getElementById('logoUpload');
             const logoPreview = document.getElementById('logoPreview');
             
-            if (!logoUpload || !logoPreview) return;
+            // Toggle admin panel
+            adminToggle.addEventListener('click', function() {
+                adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+            });
             
-            logoUpload.addEventListener('change', function() {
-                const file = this.files[0];
+            // Close admin panel
+            closeAdmin.addEventListener('click', function() {
+                adminPanel.style.display = 'none';
+            });
+            
+            // Handle logo upload
+            logoUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
                 if (file) {
                     const reader = new FileReader();
                     reader.onload = function(e) {
-                        logoPreview.innerHTML = `<img src="${e.target.result}" alt="Logo Preview" style="max-width: 200px; max-height: 100px;">`;
+                        const logoDataUrl = e.target.result;
+                        // Preview the logo
+                        logoPreview.innerHTML = `<img src="${logoDataUrl}" alt="Logo Preview">`;
+                        // Save to localStorage
+                        localStorage.setItem('starcarsLogo', logoDataUrl);
                     };
                     reader.readAsDataURL(file);
                 }
             });
-        }
-
-        // Global variables for data
-        let partsData = [];
-        let vehiclesData = [];
-        let contactData = {};
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Load and display parts
-            const partsResponse = await loadJSON('parts.json');
-            partsData = partsResponse.parts || [];
-            displayParts(partsData);
             
-            // Load and display vehicles
-            const vehiclesResponse = await loadJSON('vehicles.json');
-            vehiclesData = vehiclesResponse.vehicles || [];
-            displayVehicles(vehiclesData);
+            // Simulate saving changes
+            document.querySelector('.btn-save').addEventListener('click', function() {
+                alert('Changes saved successfully! (This is a demo - in a real application, changes would be saved to a database)');
+                adminPanel.style.display = 'none';
+            });
             
-            // Load and display contact info
-            const contactResponse = await loadJSON('contact.json');
-            contactData = contactResponse;
-            displayContact(contactData);
+            // Keyboard shortcut to open admin panel (Ctrl+Alt+A)
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.altKey && e.key === 'a') {
+                    e.preventDefault();
+                    adminPanel.style.display = 'block';
+                }
+            });
             
-            // Setup event listeners
-            document.getElementById('closeGallery').addEventListener('click', closeGallery);
-            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
-            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
-            document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
-            document.getElementById('closeAdmin').addEventListener('click', toggleAdminPanel);
-            
-            // Setup logo upload
-            setupLogoUpload();
-            
-            // Close gallery when clicking outside
-            window.addEventListener('click', function(event) {
-                const modal = document.getElementById('galleryModal');
-                if (event.target === modal) {
-                    closeGallery();
+            // Keyboard navigation for gallery
+            document.addEventListener('keydown', function(e) {
+                if (document.getElementById('galleryModal').style.display === 'block') {
+                    if (e.key === 'Escape') closeGallery();
+                    if (e.key === 'ArrowLeft') changeSlide(-1);
+                    if (e.key === 'ArrowRight') changeSlide(1);
                 }
             });
         });
