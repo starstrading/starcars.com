@@ -60,9 +60,10 @@
             gap: 15px;
         }
         
-        .logo-icon {
-            font-size: 2.5rem;
-            color: white;
+        .logo-image {
+            height: 60px; /* Increased logo size */
+            width: auto;
+            object-fit: contain;
         }
         
         .logo-text {
@@ -157,6 +158,39 @@
             height: 4px;
             background-color: var(--secondary);
             margin: 10px auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Parts Section */
@@ -559,6 +593,10 @@
                 font-size: 1.8rem;
             }
             
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
             .admin-form {
                 grid-template-columns: 1fr;
             }
@@ -599,6 +637,7 @@
                 <ul>
                     <li><a href="#parts">Parts</a></li>
                     <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
@@ -635,6 +674,24 @@
             
             <div id="vehicles-container" class="vehicles-container">
                 <!-- Vehicles will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Star Cars Motor Spares & Auto Sales has been a trusted name in the automotive industry since 2005. We started as a small family business with a passion for cars and a commitment to quality service.</p>
+                    <p>Today, we've grown into a leading supplier of auto parts and vehicles, serving customers across the region. Our team of experienced professionals is dedicated to providing the best products and service to meet all your automotive needs.</p>
+                    <p>We pride ourselves on our extensive inventory, competitive pricing, and knowledgeable staff who are always ready to assist you with expert advice.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Our Auto Shop">
+                </div>
             </div>
         </div>
     </section>
@@ -683,6 +740,7 @@
                     <h3>Quick Links</h3>
                     <p><a href="#parts" style="color: #ddd;">Parts</a></p>
                     <p><a href="#vehicles" style="color: #ddd;">Vehicles</a></p>
+                    <p><a href="#about" style="color: #ddd;">About</a></p>
                     <p><a href="#contact" style="color: #ddd;">Contact Us</a></p>
                 </div>
                 
@@ -724,6 +782,7 @@
                 <select id="section">
                     <option value="parts">Parts Section</option>
                     <option value="vehicles">Vehicles Section</option>
+                    <option value="about">About Section</option>
                     <option value="contact">Contact Information</option>
                 </select>
             </div>
@@ -985,17 +1044,12 @@
             currentSlideIndex = 0;
             
             const gallerySlides = document.getElementById('gallerySlides');
-            gallerySlides.innerHTML = '';
+            gallerySlides.innerHTML = vehicle.images.map((img, index) => `
+                <div class="gallery-slide ${index === 0 ? 'active' : ''}">
+                    <img src="${img}" class="gallery-image" alt="${vehicle.make} ${vehicle.model} - Image ${index + 1}">
+                </div>
+            `).join('');
             
-            // Create slides for each image
-            vehicle.images.forEach((image, index) => {
-                const slide = document.createElement('div');
-                slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
-                slide.innerHTML = `<img src="${image}" class="gallery-image" alt="${vehicle.make} ${vehicle.model}">`;
-                gallerySlides.appendChild(slide);
-            });
-            
-            // Show the gallery modal
             document.getElementById('galleryModal').style.display = 'block';
         }
 
@@ -1023,98 +1077,71 @@
             slides[currentSlideIndex].classList.add('active');
         }
 
-        // Global variables to store data
-        let vehiclesData = [];
-
-        // Load all data when the page is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load parts data
-            loadJSON('data/parts.json')
-                .then(data => {
-                    displayParts(data.parts);
-                });
-
-            // Load vehicles data
-            loadJSON('data/vehicles.json')
-                .then(data => {
-                    vehiclesData = data.vehicles;
-                    displayVehicles(data.vehicles);
-                });
-
-            // Load contact data
-            loadJSON('data/contact.json')
-                .then(data => {
-                    displayContact(data);
-                });
-
-            // Setup gallery event listeners
-            document.getElementById('closeGallery').addEventListener('click', closeGallery);
-            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
-            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
-            
-            // Close gallery when clicking outside the image
-            document.getElementById('galleryModal').addEventListener('click', function(e) {
-                if (e.target === this) closeGallery();
-            });
-
-            // Admin panel functionality
-            const adminToggle = document.getElementById('adminToggle');
+        // Admin panel functionality
+        function toggleAdminPanel() {
             const adminPanel = document.getElementById('adminPanel');
-            const closeAdmin = document.getElementById('closeAdmin');
+            adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Logo upload preview
+        function setupLogoUpload() {
             const logoUpload = document.getElementById('logoUpload');
             const logoPreview = document.getElementById('logoPreview');
             
-            // Toggle admin panel
-            adminToggle.addEventListener('click', function() {
-                adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
-            });
+            if (!logoUpload || !logoPreview) return;
             
-            // Close admin panel
-            closeAdmin.addEventListener('click', function() {
-                adminPanel.style.display = 'none';
-            });
-            
-            // Handle logo upload
-            logoUpload.addEventListener('change', function(e) {
-                const file = e.target.files[0];
+            logoUpload.addEventListener('change', function() {
+                const file = this.files[0];
                 if (file) {
                     const reader = new FileReader();
                     reader.onload = function(e) {
-                        const logoDataUrl = e.target.result;
-                        // Preview the logo
-                        logoPreview.innerHTML = `<img src="${logoDataUrl}" alt="Logo Preview">`;
-                        // Save to localStorage
-                        localStorage.setItem('starcarsLogo', logoDataUrl);
+                        logoPreview.innerHTML = `<img src="${e.target.result}" alt="Logo Preview" style="max-width: 200px; max-height: 100px;">`;
                     };
                     reader.readAsDataURL(file);
                 }
             });
+        }
+
+        // Global variables for data
+        let partsData = [];
+        let vehiclesData = [];
+        let contactData = {};
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Load and display parts
+            const partsResponse = await loadJSON('parts.json');
+            partsData = partsResponse.parts || [];
+            displayParts(partsData);
             
-            // Simulate saving changes
-            document.querySelector('.btn-save').addEventListener('click', function() {
-                alert('Changes saved successfully! (This is a demo - in a real application, changes would be saved to a database)');
-                adminPanel.style.display = 'none';
-            });
+            // Load and display vehicles
+            const vehiclesResponse = await loadJSON('vehicles.json');
+            vehiclesData = vehiclesResponse.vehicles || [];
+            displayVehicles(vehiclesData);
             
-            // Keyboard shortcut to open admin panel (Ctrl+Alt+A)
-            document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && e.altKey && e.key === 'a') {
-                    e.preventDefault();
-                    adminPanel.style.display = 'block';
-                }
-            });
+            // Load and display contact info
+            const contactResponse = await loadJSON('contact.json');
+            contactData = contactResponse;
+            displayContact(contactData);
             
-            // Keyboard navigation for gallery
-            document.addEventListener('keydown', function(e) {
-                if (document.getElementById('galleryModal').style.display === 'block') {
-                    if (e.key === 'Escape') closeGallery();
-                    if (e.key === 'ArrowLeft') changeSlide(-1);
-                    if (e.key === 'ArrowRight') changeSlide(1);
+            // Setup event listeners
+            document.getElementById('closeGallery').addEventListener('click', closeGallery);
+            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
+            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
+            document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
+            document.getElementById('closeAdmin').addEventListener('click', toggleAdminPanel);
+            
+            // Setup logo upload
+            setupLogoUpload();
+            
+            // Close gallery when clicking outside
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('galleryModal');
+                if (event.target === modal) {
+                    closeGallery();
                 }
             });
         });
     </script>
 </body>
 </html>
-
-
