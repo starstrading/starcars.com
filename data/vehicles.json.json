@@ -1,0 +1,64 @@
+{
+  "vehicles": [
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2021,
+      "price": 25500,
+      "mileage": 25000,
+      "transmission": "Automatic",
+      "status": "available",
+      "images": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1540066019607-e5f69323a8dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2022,
+      "price": 22800,
+      "mileage": 15000,
+      "transmission": "Automatic",
+      "status": "available",
+      "images": [
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1550353127-b0da3aeaa0ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
+    },
+    {
+      "id": 3,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2020,
+      "price": 32000,
+      "mileage": 30000,
+      "transmission": "Manual",
+      "status": "sold",
+      "images": [
+        "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1544828262-6b0c2c42bd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
+    },
+    {
+      "id": 4,
+      "make": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "price": 48500,
+      "mileage": 22000,
+      "transmission": "Automatic",
+      "status": "incoming",
+      "images": [
+        "https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1603712610494-93e558b573d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Cars Motor Spares & Auto Sales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #003884;
+            --secondary: #ff3d00;
+            --light: #f5f5f5;
+            --dark: #212121;
+            --success: #4caf50;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            padding-bottom: 50px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .logo-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .logo-text-top {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text-bottom {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e53935;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            font-size: 2.2rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto;
+        }
+        
+        /* Parts Section */
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .part-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .part-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .part-info {
+            padding: 20px;
+        }
+        
+        .part-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Vehicles Section */
+        .vehicles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .vehicle-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .vehicle-image {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .image-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .vehicle-info {
+            padding: 20px;
+        }
+        
+        .vehicle-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .status.available {
+            background-color: #e8f5e9;
+            color: var(--success);
+        }
+        
+        .status.sold {
+            background-color: #ffebee;
+            color: #f44336;
+        }
+        
+        .status.incoming {
+            background-color: #e3f2fd;
+            color: #2196f3;
+        }
+        
+        /* Image Gallery Modal */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gallery-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .gallery-slide.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gallery-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        
+        .close-gallery {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .gallery-prev, .gallery-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .gallery-next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .gallery-prev:hover, .gallery-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 25px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+        
+        .map {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+        
+        /* Admin Panel */
+        .admin-toggle {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: transparent;
+            color: #666;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .admin-panel {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .admin-panel h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .admin-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+        }
+        
+        .admin-actions {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .admin-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .btn-save {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .btn-cancel {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        /* Logo Upload Section */
+        .logo-upload {
+            grid-column: span 2;
+            background: #444;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .logo-preview {
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .logo-preview img {
+            max-width: 200px;
+            max-height: 100px;
+            border: 1px dashed #ccc;
+            padding: 5px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .admin-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .admin-actions {
+                grid-column: span 1;
+            }
+            
+            .logo-upload {
+                grid-column: span 1;
+            }
+            
+            .gallery-prev, .gallery-next {
+                font-size: 18px;
+                padding: 10px;
+            }
+            
+            .close-gallery {
+                font-size: 30px;
+                top: 10px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-car logo-icon"></i>
+                <div class="logo-text">
+                    <div class="logo-text-top">STARCARS</div>
+                    <div class="logo-text-bottom">MOTORSPARES</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#parts">Parts</a></li>
+                    <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Star Cars Motor Spares & Auto Sales</h1>
+            <p>WHOLESALES & RETAILERS OF AUTO PARTS</p>
+            <p>Your trusted partner for quality auto parts and reliable vehicles. We offer a wide range of parts for various models and a selection of well-maintained cars for sale.</p>
+            <a href="#contact" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Parts Section -->
+    <section id="parts">
+        <div class="container">
+            <h2 class="section-title">Parts We Offer</h2>
+            <p style="text-align: center; margin-bottom: 30px;">We have parts for a wide range of vehicle models. Browse our selection below.</p>
+            
+            <div id="parts-grid" class="parts-grid">
+                <!-- Parts will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="vehicles" style="background-color: #eee;">
+        <div class="container">
+            <h2 class="section-title">Vehicles For Sale</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Browse our current inventory of available vehicles, upcoming shipments, and sold vehicles.</p>
+            
+            <div id="vehicles-container" class="vehicles-container">
+                <!-- Vehicles will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="close-gallery" id="closeGallery">&times;</span>
+        <div class="modal-content">
+            <div class="gallery-slides" id="gallerySlides">
+                <!-- Slides will be added by JavaScript -->
+            </div>
+            <a class="gallery-prev" id="galleryPrev">&#10094;</a>
+            <a class="gallery-next" id="galleryNext">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Get in touch with us for any inquiries about our parts or vehicles.</p>
+            
+            <div class="contact-container">
+                <div id="contact-info" class="contact-info">
+                    <!-- Contact info will be loaded by JavaScript -->
+                </div>
+                
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304613!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1685111691328!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Star Cars</h3>
+                    <p>WHOLESALES & RETAILERS OF AUTO PARTS</p>
+                    <p>Your trusted partner for quality auto parts and reliable vehicles since 2005.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#parts" style="color: #ddd;">Parts</a></p>
+                    <p><a href="#vehicles" style="color: #ddd;">Vehicles</a></p>
+                    <p><a href="#contact" style="color: #ddd;">Contact Us</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p>Monday-Friday: 9am - 6pm</p>
+                    <p>Saturday: 10am - 4pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Star Cars Motor Spares & Auto Sales. All rights reserved.</p>
+            </div>
+        </div>
+        
+        <!-- Admin Panel Toggle (hidden in footer) -->
+        <button class="admin-toggle" id="adminToggle">Admin</button>
+    </footer>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <h3>Website Admin Panel</h3>
+        <form class="admin-form">
+            <div class="logo-upload">
+                <h4>Upload Logo</h4>
+                <div class="form-group">
+                    <label for="logoUpload">Select Logo Image</label>
+                    <input type="file" id="logoUpload" accept="image/*">
+                </div>
+                <div class="logo-preview">
+                    <p>Logo Preview:</p>
+                    <div id="logoPreview"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="section">Section to Edit</label>
+                <select id="section">
+                    <option value="parts">Parts Section</option>
+                    <option value="vehicles">Vehicles Section</option>
+                    <option value="contact">Contact Information</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="action">Action</label>
+                <select id="action">
+                    <option value="add">Add New Item</option>
+                    <option value="edit">Edit Existing Item</option>
+                    <option value="remove">Remove Item</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="itemTitle">Title</label>
+                <input type="text" id="itemTitle" placeholder="Enter title">
+            </div>
+            
+            <div class="form-group">
+                <label for="itemDescription">Description</label>
+                <textarea id="itemDescription" placeholder="Enter description"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="itemImage">Image URL</label>
+                <input type="text" id="itemImage" placeholder="Enter image URL">
+            </div>
+            
+            <div class="form-group">
+                <label for="itemStatus">Status (for vehicles)</label>
+                <select id="itemStatus">
+                    <option value="available">Available</option>
+                    <option value="sold">Sold</option>
+                    <option value="incoming">Incoming Shipment</option>
+                </select>
+            </div>
+            
+            <div class="admin-actions">
+                <button type="button" class="admin-btn btn-save">Save Changes</button>
+                <button type="button" class="admin-btn btn-cancel" id="closeAdmin">Close Panel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JSON Loading and Gallery JavaScript -->
+    <script>
+        // Function to load JSON data
+        async function loadJSON(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error loading JSON:', error);
+                // Fallback to default data if JSON loading fails
+                return fallbackData(url);
+            }
+        }
+
+        // Fallback data if JSON files can't be loaded
+        function fallbackData(url) {
+            if (url.includes('parts.json')) {
+                return {
+                    parts: [
+                        {
+                            id: 1,
+                            make: "Toyota",
+                            models: ["Corolla", "Camry", "RAV4", "Hilux", "Land Cruiser"],
+                            category: "Engine Parts"
+                        },
+                        {
+                            id: 2,
+                            make: "Honda",
+                            models: ["Civic", "Accord", "CR-V", "Fit", "Odyssey"],
+                            category: "Transmission Parts"
+                        },
+                        {
+                            id: 3,
+                            make: "Ford",
+                            models: ["Focus", "Fiesta", "Ranger", "Escape", "Mustang"],
+                            category: "Suspension Parts"
+                        },
+                        {
+                            id: 4,
+                            make: "Nissan",
+                            models: ["Altima", "Sentra", "Rogue", "X-Trail", "Navara"],
+                            category: "Brake Systems"
+                        },
+                        {
+                            id: 5,
+                            make: "BMW",
+                            models: ["3 Series", "5 Series", "X3", "X5", "Z4"],
+                            category: "Electrical Parts"
+                        },
+                        {
+                            id: 6,
+                            make: "Mercedes-Benz",
+                            models: ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
+                            category: "Cooling Systems"
+                        }
+                    ]
+                };
+            } else if (url.includes('vehicles.json')) {
+                return {
+                    vehicles: [
+                        {
+                            id: 1,
+                            make: "Toyota",
+                            model: "RAV4",
+                            year: 2021,
+                            price: 25500,
+                            mileage: 25000,
+                            transmission: "Automatic",
+                            status: "available",
+                            images: [
+                                "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1540066019607-e5f69323a8dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            ]
+                        },
+                        {
+                            id: 2,
+                            make: "Honda",
+                            model: "Civic",
+                            year: 2022,
+                            price: 22800,
+                            mileage: 15000,
+                            transmission: "Automatic",
+                            status: "available",
+                            images: [
+                                "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1550353127-b0da3aeaa0ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            ]
+                        },
+                        {
+                            id: 3,
+                            make: "Ford",
+                            model: "Mustang",
+                            year: 2020,
+                            price: 32000,
+                            mileage: 30000,
+                            transmission: "Manual",
+                            status: "sold",
+                            images: [
+                                "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1544828262-6b0c2c42bd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            ]
+                        },
+                        {
+                            id: 4,
+                            make: "BMW",
+                            model: "X5",
+                            year: 2021,
+                            price: 48500,
+                            mileage: 22000,
+                            transmission: "Automatic",
+                            status: "incoming",
+                            images: [
+                                "https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                                "https://images.unsplash.com/photo-1603712610494-93e558b573d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            ]
+                        }
+                    ]
+                };
+            } else if (url.includes('contact.json')) {
+                return {
+                    company: "Star Cars Motor Spares & Auto Sales",
+                    address: "123 Auto Road, Motor City",
+                    phone: "(555) 123-4567",
+                    mobile: "(555) 987-6543",
+                    email: "info@starcarsauto.com",
+                    social: {
+                        facebook: "https://www.facebook.com/starcarsauto",
+                        whatsapp: "https://wa.me/5559876543",
+                        tiktok: "https://tiktok.com/@starcarsauto",
+                        instagram: "https://instagram.com/starcarsauto"
+                    }
+                };
+            }
+        }
+
+        // Function to display parts data
+        function displayParts(parts) {
+            const partsGrid = document.getElementById('parts-grid');
+            if (!partsGrid) return;
+            
+            partsGrid.innerHTML = parts.map(part => `
+                <div class="part-card">
+                    <div class="part-info">
+                        <h3>${part.make}</h3>
+                        <p>${part.models.join(', ')}</p>
+                        <p><strong>Category:</strong> ${part.category}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Function to display vehicles data
+        function displayVehicles(vehicles) {
+            const vehiclesContainer = document.getElementById('vehicles-container');
+            if (!vehiclesContainer) return;
+            
+            vehiclesContainer.innerHTML = vehicles.map(vehicle => `
+                <div class="vehicle-card">
+                    <div class="vehicle-image" style="background-image: url('${vehicle.images[0]}')" 
+                         onclick="openGallery(${vehicle.id})">
+                        <div class="image-count">${vehicle.images.length} photos</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>${vehicle.make} ${vehicle.model} ${vehicle.year}</h3>
+                        <p><strong>Price:</strong> $${vehicle.price.toLocaleString()}</p>
+                        <p><strong>Mileage:</strong> ${vehicle.mileage.toLocaleString()} km</p>
+                        <p><strong>Transmission:</strong> ${vehicle.transmission}</p>
+                        <span class="status ${vehicle.status}">${vehicle.status.charAt(0).toUpperCase() + vehicle.status.slice(1)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Function to display contact data
+        function displayContact(contact) {
+            const contactInfo = document.getElementById('contact-info');
+            if (!contactInfo) return;
+            
+            contactInfo.innerHTML = `
+                <h3>Our Information</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> ${contact.address}</p>
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> ${contact.phone}</p>
+                    <p><i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> ${contact.mobile}</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ${contact.email}</p>
+                </div>
+                
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="${contact.social.facebook}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="${contact.social.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="${contact.social.tiktok}" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="${contact.social.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            `;
+        }
+
+        // Gallery functionality
+        let currentVehicle = null;
+        let currentSlideIndex = 0;
+
+        function openGallery(vehicleId) {
+            // Find the vehicle with matching ID
+            const vehicle = vehiclesData.find(v => v.id === vehicleId);
+            if (!vehicle || !vehicle.images || vehicle.images.length === 0) return;
+            
+            currentVehicle = vehicle;
+            currentSlideIndex = 0;
+            
+            const gallerySlides = document.getElementById('gallerySlides');
+            gallerySlides.innerHTML = '';
+            
+            // Create slides for each image
+            vehicle.images.forEach((image, index) => {
+                const slide = document.createElement('div');
+                slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `<img src="${image}" class="gallery-image" alt="${vehicle.make} ${vehicle.model}">`;
+                gallerySlides.appendChild(slide);
+            });
+            
+            // Show the gallery modal
+            document.getElementById('galleryModal').style.display = 'block';
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = 'none';
+            currentVehicle = null;
+            currentSlideIndex = 0;
+        }
+
+        function changeSlide(n) {
+            if (!currentVehicle) return;
+            
+            const slides = document.querySelectorAll('.gallery-slide');
+            if (slides.length === 0) return;
+            
+            // Hide current slide
+            slides[currentSlideIndex].classList.remove('active');
+            
+            // Calculate new slide index
+            currentSlideIndex += n;
+            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+            
+            // Show new slide
+            slides[currentSlideIndex].classList.add('active');
+        }
+
+        // Global variables to store data
+        let vehiclesData = [];
+
+        // Load all data when the page is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load parts data
+            loadJSON('data/parts.json')
+                .then(data => {
+                    displayParts(data.parts);
+                });
+
+            // Load vehicles data
+            loadJSON('data/vehicles.json')
+                .then(data => {
+                    vehiclesData = data.vehicles;
+                    displayVehicles(data.vehicles);
+                });
+
+            // Load contact data
+            loadJSON('data/contact.json')
+                .then(data => {
+                    displayContact(data);
+                });
+
+            // Setup gallery event listeners
+            document.getElementById('closeGallery').addEventListener('click', closeGallery);
+            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
+            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
+            
+            // Close gallery when clicking outside the image
+            document.getElementById('galleryModal').addEventListener('click', function(e) {
+                if (e.target === this) closeGallery();
+            });
+
+            // Admin panel functionality
+            const adminToggle = document.getElementById('adminToggle');
+            const adminPanel = document.getElementById('adminPanel');
+            const closeAdmin = document.getElementById('closeAdmin');
+            const logoUpload = document.getElementById('logoUpload');
+            const logoPreview = document.getElementById('logoPreview');
+            
+            // Toggle admin panel
+            adminToggle.addEventListener('click', function() {
+                adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // Close admin panel
+            closeAdmin.addEventListener('click', function() {
+                adminPanel.style.display = 'none';
+            });
+            
+            // Handle logo upload
+            logoUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const logoDataUrl = e.target.result;
+                        // Preview the logo
+                        logoPreview.innerHTML = `<img src="${logoDataUrl}" alt="Logo Preview">`;
+                        // Save to localStorage
+                        localStorage.setItem('starcarsLogo', logoDataUrl);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Simulate saving changes
+            document.querySelector('.btn-save').addEventListener('click', function() {
+                alert('Changes saved successfully! (This is a demo - in a real application, changes would be saved to a database)');
+                adminPanel.style.display = 'none';
+            });
+            
+            // Keyboard shortcut to open admin panel (Ctrl+Alt+A)
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.altKey && e.key === 'a') {
+                    e.preventDefault();
+                    adminPanel.style.display = 'block';
+                }
+            });
+            
+            // Keyboard navigation for gallery
+            document.addEventListener('keydown', function(e) {
+                if (document.getElementById('galleryModal').style.display === 'block') {
+                    if (e.key === 'Escape') closeGallery();
+                    if (e.key === 'ArrowLeft') changeSlide(-1);
+                    if (e.key === 'ArrowRight') changeSlide(1);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

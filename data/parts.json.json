@@ -1,0 +1,40 @@
+{
+  "parts": [
+    {
+      "id": 1,
+      "make": "Toyota",
+      "models": ["Corolla", "Camry", "RAV4", "Hilux", "Land Cruiser"],
+      "category": "Engine Parts"
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "models": ["Civic", "Accord", "CR-V", "Fit", "Odyssey"],
+      "category": "Transmission Parts"
+    },
+    {
+      "id": 3,
+      "make": "Ford",
+      "models": ["Focus", "Fiesta", "Ranger", "Escape", "Mustang"],
+      "category": "Suspension Parts"
+    },
+    {
+      "id": 4,
+      "make": "Nissan",
+      "models": ["Altima", "Sentra", "Rogue", "X-Trail", "Navara"],
+      "category": "Brake Systems"
+    },
+    {
+      "id": 5,
+      "make": "BMW",
+      "models": ["3 Series", "5 Series", "X3", "X5", "Z4"],
+      "category": "Electrical Parts"
+    },
+    {
+      "id": 6,
+      "make": "Mercedes-Benz",
+      "models": ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
+      "category": "Cooling Systems"
+    }
+  ]
+}
