@@ -12,31 +12,72 @@
         "2002 - 2005 Spacio",
         "2010 TownAce/LiteAce",
         "2008 - 2012 Hiace/Pitbull"
-    }
+      ]
+    },
     {
       "id": 2,
       "make": "Nissan",
-      "models": ["Civic", "Accord", "CR-V", "Fit", "Odyssey"],
+      "models": [
+        "2007 - 2017 Nissan Tiida",
+        "2013 - 2020 Nissan Note",
+        "2007 - 2014 Nissan X-Trail",
+        "2008 - 2013 Nissan Serena",
+        "2014 - 2020 Nissan Sylphy",
+        "2010 - 2017 Nissan March",
+        "2005 - 2013 Nissan Wingroad"
+      ]
     },
     {
       "id": 3,
       "make": "Honda",
-      "models": ["Focus", "Fiesta", "Ranger", "Escape", "Mustang"],
+      "models": [
+        "2006 - 2015 Honda Civic",
+        "2008 - 2017 Honda Accord",
+        "2007 - 2016 Honda CR-V",
+        "2011 - 2020 Honda Fit/Jazz",
+        "2004 - 2014 Honda Airwave",
+        "2009 - 2018 Honda Freed",
+        "2002 - 2008 Honda Stream"
+      ]
     },
     {
       "id": 4,
       "make": "Mazda",
-      "models": ["Altima", "Sentra", "Rogue", "X-Trail", "Navara"],
+      "models": [
+        "2008 - 2016 Mazda Axela",
+        "2012 - 2019 Mazda Demio",
+        "2007 - 2013 Mazda Premacy",
+        "2013 - 2020 Mazda CX-5",
+        "2002 - 2008 Mazda Familia",
+        "2010 - 2017 Mazda Biante",
+        "2005 - 2012 Mazda Verisa"
+      ]
     },
     {
       "id": 5,
       "make": "Audi",
-      "models": ["3 Series", "5 Series", "X3", "X5", "Z4"],
+      "models": [
+        "2011 - 2018 Audi A4",
+        "2015 - 2020 Audi A3",
+        "2006 - 2015 Audi Q7",
+        "2011 - 2017 Audi A6",
+        "2008 - 2016 Audi Q5",
+        "2010 - 2018 Audi A5",
+        "2012 - 2020 Audi A1"
+      ]
     },
     {
       "id": 6,
       "make": "Mitsubishi",
-      "models": ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
+      "models": [
+        "2007 - 2017 Mitsubishi Lancer",
+        "2012 - 2020 Mitsubishi Outlander",
+        "2003 - 2013 Mitsubishi Grandis",
+        "2010 - 2019 Mitsubishi ASX",
+        "2004 - 2014 Mitsubishi Colt",
+        "2007 - 2016 Mitsubishi Delica",
+        "2013 - 2020 Mitsubishi Attrage"
+      ]
     }
   ]
 }
