@@ -3,8 +3,15 @@
     {
       "id": 1,
       "make": "Toyota",
-      "models": ["2002 - 2013 Allion & Premio, 2006 - 2016 Axio & Fielder Wagon, 2005 - 2010 I.S.T/ITZ, 1999 - 2005 Raum, 2012 - 2017 Vitz, 2002 - 2005 Spacio, 
-2010 TownAce/LiteAce, 2008 - 2012 Hiace/Pitbull"],
+      "models": [
+        "2002 - 2013 Allion & Premio",
+        "2006 - 2016 Axio & Fielder Wagon", 
+        "2005 - 2010 I.S.T/ITZ",
+        "1999 - 2005 Raum",
+        "2012 - 2017 Vitz",
+        "2002 - 2005 Spacio",
+        "2010 TownAce/LiteAce",
+        "2008 - 2012 Hiace/Pitbull"
     },
     {
       "id": 2,
