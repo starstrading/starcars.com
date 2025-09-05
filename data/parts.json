@@ -3,38 +3,33 @@
     {
       "id": 1,
       "make": "Toyota",
-      "models": ["Corolla", "Camry", "RAV4", "Hilux", "Land Cruiser"],
-      "category": "Engine Parts"
+      "models": ["2002 - 2013 Allion & Premio, 2006 - 2016 Axio & Fielder Wagon, 2005 - 2010 I.S.T/ITZ, 1999 - 2005 Raum, 2012 - 2017 Vitz, 2002 - 2005 Spacio, 
+2010 TownAce/LiteAce, 2008 - 2012 Hiace/Pitbull"],
     },
     {
       "id": 2,
-      "make": "Honda",
+      "make": "Nissan",
       "models": ["Civic", "Accord", "CR-V", "Fit", "Odyssey"],
-      "category": "Transmission Parts"
     },
     {
       "id": 3,
-      "make": "Ford",
+      "make": "Honda",
       "models": ["Focus", "Fiesta", "Ranger", "Escape", "Mustang"],
-      "category": "Suspension Parts"
     },
     {
       "id": 4,
-      "make": "Nissan",
+      "make": "Mazda",
       "models": ["Altima", "Sentra", "Rogue", "X-Trail", "Navara"],
-      "category": "Brake Systems"
     },
     {
       "id": 5,
-      "make": "BMW",
+      "make": "Audi",
       "models": ["3 Series", "5 Series", "X3", "X5", "Z4"],
-      "category": "Electrical Parts"
     },
     {
       "id": 6,
-      "make": "Mercedes-Benz",
+      "make": "Mitsubishi",
       "models": ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
-      "category": "Cooling Systems"
     }
   ]
 }
