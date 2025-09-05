@@ -685,12 +685,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Our Story</h3>
-                    <p>Founded in 2019 by brothers Sudesh and Videsh, Star Cars Motor Spares & Auto Sales began as a small operation driven by a passion for quality automotive parts.</p>
-                    <p>The business expanded significantly within three years, moving to a larger facility with an extensive inventory including auto body parts, suspension parts, engines, transmission, nose-cuts etc.</p>
-                    <p>In December 2024, a second branch opened in Georgetown, Guyana. Star Cars distinguishes itself through its commitment to quality, a customer-first approach, and building relationships with customers.</p>
+                    <p>Star Cars Motor Spares & Auto Sales has been a trusted name in the automotive industry since 2005. We started as a small family business with a passion for cars and a commitment to quality service.</p>
+                    <p>Today, we've grown into a leading supplier of auto parts and vehicles, serving customers across the region. Our team of experienced professionals is dedicated to providing the best products and service to meet all your automotive needs.</p>
+                    <p>We pride ourselves on our extensive inventory, competitive pricing, and knowledgeable staff who are always ready to assist you with expert advice.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Our Auto Shop">
+                    <img src="https://i.ibb.co/j9sC05gW/star-cars-gt-branch-pic.jpg" alt="Star Cars GT Branch">
                 </div>
             </div>
         </div>
@@ -718,18 +718,17 @@
                 <div id="contact-info" class="contact-info">
                     <h3>Our Information</h3>
                     <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Main Branch:</strong> 16 Seafield Leonora, West Coast Demerara Guyana</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (555) 639-7019</p>
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Second Branch:</strong> 123 Auto Road, Motor City</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (555) 642-5072</p>
-                        <p><i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> (555) 642-5072</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@starcarsauto.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Leonora Branch:</strong> 16 Seafield Leonora, West Coast Demerara Guyana</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (592) 613-0009 or 642-5072</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>GT Branch:</strong> Princess & George St. Georgetown Guyana</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (592) 751-3031/32 or 629-7773</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> starcarsauto@yahoo.com</p>
                     </div>
                     
                     <h3>Follow Us</h3>
                     <div class="social-links">
                         <a href="https://www.facebook.com/starcarsauto" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5559876543" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/5926130009" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://tiktok.com/@starcarsauto" target="_blank"><i class="fab fa-tiktok"></i></a>
                         <a href="https://instagram.com/starcarsauto" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -844,7 +843,7 @@
     </div>
 
     <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXb-jiU8yLvYxTavvwd3HyH2oC3rVmUcI&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXb-jiU8yLvYxTavvwd3HyH2oC3rVmUcI&callback=initMap&loading=async"></script>
 
     <!-- JSON Loading and Gallery JavaScript -->
     <script>
@@ -883,7 +882,7 @@
                         {
                             id: 3,
                             make: "Ford",
-                            models: ["Focus", "Fiesta", "Ranger", "Escape", "Mustang"],
+                            models: ["Focus", "Fiesta", "Ranger", "Eescape", "Mustang"],
                             category: "Suspension Parts"
                         },
                         {
@@ -1040,7 +1039,7 @@
         // Function to display contact data
         function displayContact(contact) {
             const contactInfo = document.getElementById('contact-info');
-            if (!contactInfo) return;
+            if (!contactInfo || !contact.branches) return;
             
             // Create branches HTML
             const branchesHTML = contact.branches.map(branch => `
@@ -1052,7 +1051,6 @@
                 <h3>Our Information</h3>
                 <div class="contact-details">
                     ${branchesHTML}
-                    <p><i class="fas fa-mobile-alt"></i> <strong>Mobile:</strong> ${contact.mobile}</p>
                     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ${contact.email}</p>
                 </div>
                 
@@ -1068,8 +1066,8 @@
 
         // Initialize Google Map with both locations
         function initMap() {
-            // Default center (average of both locations)
-            const center = { lat: 6.749, lng: -58.227 };
+            // Center point between both branches
+            const center = { lat: 6.749385, lng: -58.227078 };
             
             // Create map
             const map = new google.maps.Map(document.getElementById('map'), {
@@ -1122,25 +1120,22 @@
             // Add markers for both branches
             const branches = [
                 {
-                    position: { lat: 6.6849, lng: -58.2970 },
-                    title: "Main Branch",
-                    address: "16 Seafield Leonora, West Coast Demerara Guyana"
+                    position: { lat: 6.684834, lng: -58.297106 },  // Leonora Branch
+                    title: "Leonora Branch",
+                    address: "16 Seafield Leonora, W.C.D (Near Leonora Police Station)"
                 },
                 {
-                    position: { lat: 6.8130, lng: -58.1570 },
-                    title: "Second Branch",
-                    address: "123 Auto Road, Motor City"
+                    position: { lat: 6.813937, lng: -58.157050 },  // Georgetown Branch
+                    title: "Georgetown Branch",
+                    address: "Princess & George Street, Georgetown"
                 }
             ];
             
             branches.forEach(branch => {
-                const marker = new google.maps.Marker({
+                const marker = new google.maps.marker.AdvancedMarkerElement({
                     position: branch.position,
                     map: map,
-                    title: branch.title,
-                    icon: {
-                        url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
-                    }
+                    title: branch.title
                 });
                 
                 // Add info window for each marker
@@ -1303,8 +1298,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
