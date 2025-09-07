@@ -10,7 +10,7 @@
     },
     {
       "name": "Ford",
-      "models": ["F-150", "Escape", "Explorer", "Focus", "Mustang", "Edge", "Ranger", "Expedition", "Fusion", "Bronco", "EcoSport", "Everest", "Figo", "Endeavour", "Territory"]
+      "models": ["F-150", "Eescape", "Explorer", "Focus", "Mustang", "Edge", "Ranger", "Expedition", "Fusion", "Bronco", "EcoSport", "Everest", "Figo", "Endeavour", "Territory"]
     },
     {
       "name": "BMW",
@@ -60,22 +60,5 @@
       "name": "Volvo",
       "models": ["XC90", "XC60", "XC40", "S90", "S60", "V90", "V60", "V40", "C40", "XC70", "S80", "V70", "C30", "850", "240"]
     }
-  ],
-  "partCategories": [
-    "Engine Parts",
-    "Transmission Parts",
-    "Brake System",
-    "Suspension & Steering",
-    "Electrical Parts",
-    "Cooling System",
-    "Exhaust System",
-    "Fuel System",
-    "Body Parts",
-    "Interior Parts",
-    "Lighting",
-    "Filters",
-    "Belts & Hoses",
-    "Ignition System",
-    "Wheels & Tires"
   ]
 }
