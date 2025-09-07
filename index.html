@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Cars Motor Spares & Auto Sales</title>
+    <title>Star Cars Motor Spares & Auto Sale</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -18,34 +18,30 @@
             --secondary: #ff3d00;
             --light: #f5f5f5;
             --dark: #212121;
-            --success: #4caf50;
+            --grey: #757575;
         }
         
         body {
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #f8f9fa;
+            color: var(--dark);
             line-height: 1.6;
-            position: relative;
-            padding-bottom: 50px;
-            min-height: 100vh;
         }
         
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         /* Header Styles */
         header {
-            background: var(--primary);
-            color: white;
+            background-color: var(--primary);
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
         .header-content {
@@ -57,64 +53,70 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
         
-        .logo-image {
-            height: 80px;
-            width: auto;
-            object-fit: contain;
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
         }
         
         .logo-text {
-            text-transform: uppercase;
+            color: white;
+            font-size: 22px;
             font-weight: bold;
-            line-height: 1.2;
         }
         
-        .logo-text-top {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-        
-        .logo-text-bottom {
-            font-size: 1rem;
-            opacity: 0.9;
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
         }
         
-        nav a {
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
         }
         
-        nav a:hover {
-            color: var(--secondary);
+        nav ul li a:hover, nav ul li a.active {
+            background: rgba(255, 255, 255, 0.2);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
-            margin-bottom: 40px;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .hero p {
@@ -125,135 +127,84 @@
         
         .btn {
             display: inline-block;
-            background-color: var(--secondary);
+            background: var(--secondary);
             color: white;
             padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
         .btn:hover {
-            background-color: #e53935;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 50px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary);
-            font-size: 2.2rem;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-            margin: 10px auto;
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .about-text {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-text h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .about-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Parts Section */
-        .parts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .part-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .part-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .part-info {
-            padding: 20px;
-        }
-        
-        .part-info h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
+            background: #e65100;
+            transform: translateY(-2px);
         }
         
         /* Vehicles Section */
-        .vehicles-container {
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .vehicles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
+            margin-bottom: 50px;
         }
         
         .vehicle-card {
             background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .vehicle-card:hover {
+            transform: translateY(-5px);
         }
         
         .vehicle-image {
             height: 200px;
-            background-color: #ddd;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            cursor: pointer;
+            overflow: hidden;
         }
         
-        .image-count {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
+        .vehicle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .vehicle-card:hover .vehicle-image img {
+            transform: scale(1.05);
         }
         
         .vehicle-info {
@@ -261,131 +212,139 @@
         }
         
         .vehicle-info h3 {
-            color: var(--primary);
             margin-bottom: 10px;
+            color: var(--primary);
         }
         
-        .status {
+        .vehicle-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--grey);
+        }
+        
+        .vehicle-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .status-badge {
             display: inline-block;
-            padding: 5px 15px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-weight: bold;
-            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
         
-        .status.available {
-            background-color: #e8f5e9;
-            color: var(--success);
+        .status-instock {
+            background: #e8f5e9;
+            color: #2e7d32;
         }
         
-        .status.sold {
-            background-color: #ffebee;
-            color: #f44336;
+        .status-comingsoon {
+            background: #fff3e0;
+            color: #ef6c00;
         }
         
-        .status.incoming {
-            background-color: #e3f2fd;
-            color: #2196f3;
+        /* Vehicle Parts Section */
+        .parts-section {
+            padding: 60px 0;
+            background: var(--light);
         }
         
-        /* Image Gallery Modal */
-        .gallery-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
+        .parts-container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
-        .modal-content {
-            position: relative;
-            margin: auto;
-            padding: 0;
-            width: 100%;
-            max-width: 1200px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .gallery-slide {
-            display: none;
-            width: 100%;
-            height: 100%;
+        .parts-intro {
             text-align: center;
+            margin-bottom: 40px;
         }
         
-        .gallery-slide.active {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .parts-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
         
-        .gallery-image {
-            max-width: 100%;
-            max-height: 90vh;
-            object-fit: contain;
+        .makes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
         }
         
-        .close-gallery {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
+        .make-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
         
-        .gallery-prev, .gallery-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
+        .make-header {
+            background: var(--primary);
             color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.3s;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }
         
-        .gallery-next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        .make-header h3 {
+            margin: 0;
         }
         
-        .gallery-prev:hover, .gallery-next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        .make-header i {
+            transition: transform 0.3s;
+        }
+        
+        .make-header.active i {
+            transform: rotate(180deg);
+        }
+        
+        .models-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .models-list.active {
+            max-height: 500px;
+        }
+        
+        .models-list ul {
+            list-style: none;
+            padding: 15px;
+        }
+        
+        .models-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .models-list li:last-child {
+            border-bottom: none;
         }
         
         /* Contact Section */
+        .contact {
+            background: var(--light);
+            padding: 60px 0;
+        }
+        
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .contact-info {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            gap: 40px;
         }
         
         .contact-info h3 {
-            color: var(--primary);
             margin-bottom: 20px;
-            font-size: 1.5rem;
+            color: var(--primary);
         }
         
         .contact-details {
@@ -396,52 +355,56 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
         
-        .social-links {
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .social-icons {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
         }
         
-        .social-links a {
+        .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
             color: white;
             border-radius: 50%;
-            font-size: 1.5rem;
-            transition: background-color 0.3s;
+            text-decoration: none;
+            transition: all 0.3s;
         }
         
-        .social-links a:hover {
-            background-color: var(--secondary);
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
         }
         
-        .map-container {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-            height: 400px;
-        }
-        
-        #map {
+        .contact-form input, .contact-form textarea {
             width: 100%;
-            height: 100%;
-            border: none;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark);
+            background: var(--dark);
             color: white;
             padding: 40px 0 20px;
-            margin-top: 50px;
-            position: relative;
+            text-align: center;
         }
         
         .footer-content {
@@ -452,288 +415,171 @@
         }
         
         .footer-section h3 {
-            font-size: 1.3rem;
             margin-bottom: 20px;
             color: var(--secondary);
         }
         
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+        
         .footer-bottom {
-            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
-            border-top: 1px solid #555;
+            font-size: 0.9rem;
         }
         
-        /* Admin Panel */
-        .admin-toggle {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: transparent;
-            color: #666;
-            border: none;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-        
-        .admin-panel {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--dark);
-            color: white;
-            padding: 20px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        
-        .admin-panel h3 {
-            color: var(--secondary);
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .admin-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #555;
-            border-radius: 4px;
-            background-color: #333;
-            color: white;
-        }
-        
-        .admin-actions {
-            grid-column: span 2;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .admin-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .btn-save {
-            background-color: var(--success);
-            color: white;
-        }
-        
-        .btn-cancel {
-            background-color: #f44336;
-            color: white;
-        }
-        
-        /* Logo Upload Section */
-        .logo-upload {
-            grid-column: span 2;
-            background: #444;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        
-        .logo-preview {
-            margin-top: 15px;
-            text-align: center;
-        }
-        
-        .logo-preview img {
-            max-width: 200px;
-            max-height: 100px;
-            border: 1px dashed #ccc;
-            padding: 5px;
-        }
-        
-        /* Responsive Design */
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
+            .nav-toggle {
+                display: block;
             }
             
             nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
             
             .section-title {
                 font-size: 1.8rem;
             }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .admin-form {
-                grid-template-columns: 1fr;
-            }
-            
-            .admin-actions {
-                grid-column: span 1;
-            }
-            
-            .logo-upload {
-                grid-column: span 1;
-            }
-            
-            .gallery-prev, .gallery-next {
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
                 font-size: 18px;
-                padding: 10px;
             }
             
-            .close-gallery {
-                font-size: 30px;
-                top: 10px;
-                right: 20px;
+            .hero {
+                padding: 60px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-    <div class="container header-content">
-        <div class="logo">
-            <img src="https://github.com/starstrading/starcars.com/blob/main/Business%20Cards%20Section%20(1).png?raw=true" alt="Star Cars Logo" class="logo-image">
-            <!-- Text elements removed from here -->
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-placeholder">SC</div>
+                <div class="logo-text">Star Cars Auto Sale</div>
+            </div>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#" class="active" data-filter="all">In Stock Now</a></li>
+                    <li><a href="#" data-filter="coming-soon">Coming Soon</a></li>
+                    <li><a href="#parts">Vehicle Parts</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#parts">Parts</a></li>
-                <li><a href="#vehicles">Vehicles</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Star Cars Motor Spares & Auto Sales</h1>
-            <p>WHOLESALES & RETAILERS OF AUTO PARTS</p>
-            <p>Your trusted partner for quality auto parts and reliable vehicles. We offer a wide range of parts for various models and a selection of well-maintained cars for sale.</p>
-            <a href="#contact" class="btn">Contact Us Today</a>
-        </div>
-    </section>
-
-    <!-- Parts Section -->
-    <section id="parts">
-        <div class="container">
-            <h2 class="section-title">Vehicles We Stock Parts For</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Suspension Parts | Engines/Transmission | Auto-Body Parts | Electrical Parts | Complete Nose-Cuts Etc.</p>
-            
-            <div id="parts-grid" class="parts-grid">
-                <!-- Parts will be loaded by JavaScript -->
-            </div>
+            <h1>Quality Pre-Owned Vehicles</h1>
+            <p>Discover our extensive selection of reliable used cars at competitive prices. All vehicles undergo rigorous inspections to ensure quality and reliability.</p>
+            <a href="#vehicles" class="btn">Browse Inventory</a>
         </div>
     </section>
 
     <!-- Vehicles Section -->
-    <section id="vehicles" style="background-color: #eee;">
+    <section id="vehicles">
         <div class="container">
-            <h2 class="section-title">Vehicles For Sale</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Browse our current inventory of available vehicles, upcoming shipments, and sold vehicles.</p>
+            <h2 class="section-title">Our Vehicles</h2>
             
-            <div id="vehicles-container" class="vehicles-container">
-                <!-- Vehicles will be loaded by JavaScript -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Vehicles</button>
+                <button class="filter-btn" data-filter="in-stock">In Stock Now</button>
+                <button class="filter-btn" data-filter="coming-soon">Coming Soon</button>
+            </div>
+            
+            <div class="vehicles-grid" id="vehicles-container">
+                <!-- Vehicles will be loaded from JSON via JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Story</h3>
-                    <p>Star Cars Motor Spares & Auto Sales has been a trusted name in the automotive industry since 2005. We started as a small family business with a passion for cars and a commitment to quality service.</p>
-                    <p>Today, we've grown into a leading supplier of auto parts and vehicles, serving customers across the region. Our team of experienced professionals is dedicated to providing the best products and service to meet all your automotive needs.</p>
-                    <p>We pride ourselves on our extensive inventory, competitive pricing, and knowledgeable staff who are always ready to assist you with expert advice.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://i.ibb.co/j9sC05gW/star-cars-gt-branch-pic.jpg" alt="Star Cars GT Branch">
-                </div>
+    <!-- Vehicle Parts Section -->
+    <section id="parts" class="parts-section">
+        <div class="container parts-container">
+            <h2 class="section-title">Vehicle Parts</h2>
+            
+            <div class="parts-intro">
+                <p>We stock a comprehensive range of quality parts for all major vehicle makes and models. Browse our selection below to find parts for your vehicle.</p>
+            </div>
+            
+            <div class="makes-container" id="makes-container">
+                <!-- Makes and models will be loaded from JSON via JavaScript -->
             </div>
         </div>
     </section>
-
-    <!-- Image Gallery Modal -->
-    <div id="galleryModal" class="gallery-modal">
-        <span class="close-gallery" id="closeGallery">&times;</span>
-        <div class="modal-content">
-            <div class="gallery-slides" id="gallerySlides">
-                <!-- Slides will be added by JavaScript -->
-            </div>
-            <a class="gallery-prev" id="galleryPrev">&#10094;</a>
-            <a class="gallery-next" id="galleryNext">&#10095;</a>
-        </div>
-    </div>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p style="text-align: center; margin-bottom: 30px;">We have two convenient locations to serve you. Get in touch with us for any inquiries about our parts or vehicles.</p>
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Auto Road, Motor City, MC 12345</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@starcarsauto.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am - 6pm, Sat: 10am - 4pm</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
             
-            <div class="contact-container">
-                <div id="contact-info" class="contact-info">
-                    <h3>Our Information</h3>
-                    <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Leonora Branch:</strong> 16 Seafield Leonora, West Coast Demerara Guyana</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (592) 613-0009 or 642-5072</p>
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>GT Branch:</strong> Princess & George St. Georgetown Guyana</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (592) 751-3031/32 or 629-7773</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> starcarsauto@yahoo.com</p>
-                    </div>
-                    
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/starcarsauto" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5926130009" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://tiktok.com/@starcarsauto" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://instagram.com/starcarsauto" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone">
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -743,558 +589,269 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Star Cars</h3>
-                    <p>WHOLESALES & RETAILERS OF AUTO PARTS</p>
-                    <p>Your trusted partner for quality auto parts and reliable vehicles since 2005.</p>
+                    <h3>Star Cars Auto Sale</h3>
+                    <p>Your trusted partner for quality pre-owned vehicles and reliable auto parts.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <p><a href="#parts" style="color: #ddd;">Parts</a></p>
-                    <p><a href="#vehicles" style="color: #ddd;">Vehicles</a></p>
-                    <p><a href="#about" style="color: #ddd;">About</a></p>
-                    <p><a href="#contact" style="color: #ddd;">Contact Us</a></p>
+                    <p><a href="#vehicles">Browse Inventory</a></p>
+                    <p><a href="#parts">Vehicle Parts</a></p>
+                    <p><a href="#contact">Contact Us</a></p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Business Hours</h3>
-                    <p>Monday-Friday: 9am - 6pm</p>
-                    <p>Saturday: 10am - 4pm</p>
-                    <p>Sunday: Closed</p>
+                    <h3>Services</h3>
+                    <p>Vehicle Sales</p>
+                    <p>Auto Parts</p>
+                    <p>Vehicle Maintenance</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Star Cars Motor Spares & Auto Sales. All rights reserved.</p>
+                <p>&copy; 2023 Star Cars Motor Spares & Auto Sale. All rights reserved.</p>
             </div>
         </div>
-        
-        <!-- Admin Panel Toggle (hidden in footer) -->
-        <button class="admin-toggle" id="adminToggle">Admin</button>
     </footer>
 
-    <!-- Admin Panel -->
-    <div class="admin-panel" id="adminPanel">
-        <h3>Website Admin Panel</h3>
-        <form class="admin-form">
-            <div class="logo-upload">
-                <h4>Upload Logo</h4>
-                <div class="form-group">
-                    <label for="logoUpload">Select Logo Image</label>
-                    <input type="file" id="logoUpload" accept="image/*">
-                </div>
-                <div class="logo-preview">
-                    <p>Logo Preview:</p>
-                    <div id="logoPreview"></div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="section">Section to Edit</label>
-                <select id="section">
-                    <option value="parts">Parts Section</option>
-                    <option value="vehicles">Vehicles Section</option>
-                    <option value="about">About Section</option>
-                    <option value="contact">Contact Information</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="action">Action</label>
-                <select id="action">
-                    <option value="add">Add New Item</option>
-                    <option value="edit">Edit Existing Item</option>
-                    <option value="remove">Remove Item</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="itemTitle">Title</label>
-                <input type="text" id="itemTitle" placeholder="Enter title">
-            </div>
-            
-            <div class="form-group">
-                <label for="itemDescription">Description</label>
-                <textarea id="itemDescription" placeholder="Enter description"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="itemImage">Image URL</label>
-                <input type="text" id="itemImage" placeholder="Enter image URL">
-            </div>
-            
-            <div class="form-group">
-                <label for="itemStatus">Status (for vehicles)</label>
-                <select id="itemStatus">
-                    <option value="available">Available</option>
-                    <option value="sold">Sold</option>
-                    <option value="incoming">Incoming Shipment</option>
-                </select>
-            </div>
-            
-            <div class="admin-actions">
-                <button type="button" class="admin-btn btn-save">Save Changes</button>
-                <button type="button" class="admin-btn btn-cancel" id="closeAdmin">Close Panel</button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXb-jiU8yLvYxTavvwd3HyH2oC3rVmUcI&callback=initMap&loading=async"></script>
-
-    <!-- JSON Loading and Gallery JavaScript -->
     <script>
-        // Function to load JSON data
-        async function loadJSON(url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return await response.json();
-            } catch (error) {
-                console.error('Error loading JSON:', error);
-                // Fallback to default data if JSON loading fails
-                return fallbackData(url);
-            }
-        }
-
-        // Fallback data if JSON files can't be loaded
-        function fallbackData(url) {
-            if (url.includes('parts.json')) {
-                return {
-                    parts: [
-                        {
-                            id: 1,
-                            make: "Toyota",
-                            models: ["Corolla", "Camry", "RAV4", "Hilux", "Land Cruiser"],
-                            category: "Engine Parts"
-                        },
-                        {
-                            id: 2,
-                            make: "Honda",
-                            models: ["Civic", "Accord", "CR-V", "Fit", "Odyssey"],
-                            category: "Transmission Parts"
-                        },
-                        {
-                            id: 3,
-                            make: "Ford",
-                            models: ["Focus", "Fiesta", "Ranger", "Eescape", "Mustang"],
-                            category: "Suspension Parts"
-                        },
-                        {
-                            id: 4,
-                            make: "Nissan",
-                            models: ["Altima", "Sentra", "Rogue", "X-Trail", "Navara"],
-                            category: "Brake Systems"
-                        },
-                        {
-                            id: 5,
-                            make: "BMW",
-                            models: ["3 Series", "5 Series", "X3", "X5", "Z4"],
-                            category: "Electrical Parts"
-                        },
-                        {
-                            id: 6,
-                            make: "Mercedes-Benz",
-                            models: ["C-Class", "E-Class", "S-Class", "GLC", "GLE"],
-                            category: "Cooling Systems"
-                        }
-                    ]
-                };
-            } else if (url.includes('vehicles.json')) {
-                return {
-                    vehicles: [
-                        {
-                            id: 1,
-                            make: "Toyota",
-                            model: "RAV4",
-                            year: 2021,
-                            price: 25500,
-                            mileage: 25000,
-                            transmission: "Automatic",
-                            status: "available",
-                            images: [
-                                "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1540066019607-e5f69323a8dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            ]
-                        },
-                        {
-                            id: 2,
-                            make: "Honda",
-                            model: "Civic",
-                            year: 2022,
-                            price: 22800,
-                            mileage: 15000,
-                            transmission: "Automatic",
-                            status: "available",
-                            images: [
-                                "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1550353127-b0da3aeaa0ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            ]
-                        },
-                        {
-                            id: 3,
-                            make: "Ford",
-                            model: "Mustang",
-                            year: 2020,
-                            price: 32000,
-                            mileage: 30000,
-                            transmission: "Manual",
-                            status: "sold",
-                            images: [
-                                "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1544828262-6b0c2c42bd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            ]
-                        },
-                        {
-                            id: 4,
-                            make: "BMW",
-                            model: "X5",
-                            year: 2021,
-                            price: 48500,
-                            mileage: 22000,
-                            transmission: "Automatic",
-                            status: "incoming",
-                            images: [
-                                "https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                                "https://images.unsplash.com/photo-1603712610494-93e558b573d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            ]
-                        }
-                    ]
-                };
-            } else if (url.includes('contact.json')) {
-                return {
-                    company: "Star Cars Motor Spares & Auto Sales",
-                    branches: [
-                        {
-                            name: "Leonora Branch",
-                            address: "16 Seafield Leonora, West Coast Demerara Guyana",
-                            phone: "(592) 613-0009 or 642-5072",
-                            coordinates: { lat: 6.684834, lng: -58.297106 }
-                        },
-                        {
-                            name: "GT Branch",
-                            address: "Princess & George St. Georgetown Guyana",
-                            phone: "(592) 751-3031/32 or 629-7773",
-                            coordinates: { lat: 6.813937, lng: -58.157050 }
-                        }
-                    ],
-                    email: "starcarsauto@yahoo.com",
-                    social: {
-                        facebook: "https://www.facebook.com/starcarsauto",
-                        whatsapp: "https://wa.me/5926130009",
-                        tiktok: "https://tiktok.com/@starcarsauto",
-                        instagram: "https://instagram.com/starcarsauto"
-                    }
-                };
-            }
-        }
-
-        // Function to display parts data
-        function displayParts(parts) {
-            const partsGrid = document.getElementById('parts-grid');
-            if (!partsGrid) return;
-            
-            partsGrid.innerHTML = parts.map(part => `
-                <div class="part-card">
-                    <div class="part-info">
-                        <h3>${part.make}</h3>
-                        <p>${part.models.join(', ')}</p>
-                        <p><strong>Category:</strong> ${part.category}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Function to display vehicles data
-        function displayVehicles(vehicles) {
-            const vehiclesContainer = document.getElementById('vehicles-container');
-            if (!vehiclesContainer) return;
-            
-            vehiclesContainer.innerHTML = vehicles.map(vehicle => `
-                <div class="vehicle-card">
-                    <div class="vehicle-image" style="background-image: url('${vehicle.images[0]}')" 
-                         onclick="openGallery(${vehicle.id})">
-                        <div class="image-count">${vehicle.images.length} photos</div>
-                    </div>
-                    <div class="vehicle-info">
-                        <h3>${vehicle.make} ${vehicle.model} ${vehicle.year}</h3>
-                        <p><strong>Price:</strong> $${vehicle.price.toLocaleString()}</p>
-                        <p><strong>Mileage:</strong> ${vehicle.mileage.toLocaleString()} km</p>
-                        <p><strong>Transmission:</strong> ${vehicle.transmission}</p>
-                        <span class="status ${vehicle.status}">${vehicle.status.charAt(0).toUpperCase() + vehicle.status.slice(1)}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Function to display contact data
-        function displayContact(contact) {
-            const contactInfo = document.getElementById('contact-info');
-            if (!contactInfo || !contact.branches) return;
-            
-            // Create branches HTML
-            const branchesHTML = contact.branches.map(branch => `
-                <p><i class="fas fa-map-marker-alt"></i> <strong>${branch.name}:</strong> ${branch.address}</p>
-                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> ${branch.phone}</p>
-            `).join('');
-            
-            contactInfo.innerHTML = `
-                <h3>Our Information</h3>
-                <div class="contact-details">
-                    ${branchesHTML}
-                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ${contact.email}</p>
-                </div>
-                
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="${contact.social.facebook}" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="${contact.social.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="${contact.social.tiktok}" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="${contact.social.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-            `;
-        }
-
-        // Initialize Google Map with both locations
-        function initMap() {
-            // Center point between both branches
-            const center = { lat: 6.749385, lng: -58.227078 };
-            
-            // Create map
-            const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: center,
-                styles: [
-                    {
-                        "featureType": "administrative",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{"color": "#444444"}]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [{"color": "#f2f2f2"}]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "all",
-                        "stylers": [{"visibility": "off"}]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "all",
-                        "stylers": [{"saturation": -100}, {"lightness": 45}]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "all",
-                        "stylers": [{"visibility": "simplified"}]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "labels.icon",
-                        "stylers": [{"visibility": "off"}]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [{"visibility": "off"}]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "all",
-                        "stylers": [{"color": "#4f595d"}, {"visibility": "on"}]
-                    }
-                ]
-            });
-            
-            // Add markers for both branches
-            const branches = [
+        // Sample vehicle data (would typically be loaded from JSON files)
+        const vehiclesData = {
+            "vehicles": [
                 {
-                    position: { lat: 6.684834, lng: -58.297106 },  // Leonora Branch
-                    title: "Leonora Branch",
-                    address: "16 Seafield Leonora, W.C.D (Near Leonora Police Station)"
+                    "id": 1,
+                    "make": "Toyota",
+                    "model": "Corolla",
+                    "year": 2020,
+                    "price": 18500,
+                    "mileage": "45,000 km",
+                    "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "in-stock"
                 },
                 {
-                    position: { lat: 6.813937, lng: -58.157050 },  // Georgetown Branch
-                    title: "Georgetown Branch",
-                    address: "Princess & George Street, Georgetown"
+                    "id": 2,
+                    "make": "Honda",
+                    "model": "CR-V",
+                    "year": 2019,
+                    "price": 23500,
+                    "mileage": "32,000 km",
+                    "image": "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "in-stock"
+                },
+                {
+                    "id": 3,
+                    "make": "Ford",
+                    "model": "F-150",
+                    "year": 2021,
+                    "price": 34900,
+                    "mileage": "18,000 km",
+                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "coming-soon"
+                },
+                {
+                    "id": 4,
+                    "make": "BMW",
+                    "model": "3 Series",
+                    "year": 2020,
+                    "price": 31500,
+                    "mileage": "28,000 km",
+                    "image": "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "in-stock"
+                },
+                {
+                    "id": 5,
+                    "make": "Audi",
+                    "model": "Q5",
+                    "year": 2022,
+                    "price": 42500,
+                    "mileage": "12,000 km",
+                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "coming-soon"
+                },
+                {
+                    "id": 6,
+                    "make": "Mercedes-Benz",
+                    "model": "C-Class",
+                    "year": 2018,
+                    "price": 28900,
+                    "mileage": "52,000 km",
+                    "image": "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                    "status": "in-stock"
                 }
-            ];
+            ]
+        };
+
+        // Sample parts data (would typically be loaded from JSON files)
+        const partsData = {
+            "makes": [
+                {
+                    "name": "Toyota",
+                    "models": ["Corolla", "Camry", "RAV4", "Highlander", "Tacoma", "Tundra", "Sienna", "4Runner", "Prius", "Avalon"]
+                },
+                {
+                    "name": "Honda",
+                    "models": ["Civic", "Accord", "CR-V", "Pilot", "Odyssey", "HR-V", "Fit", "Ridgeline", "Passport", "Insight"]
+                },
+                {
+                    "name": "Ford",
+                    "models": ["F-150", "Escape", "Explorer", "Focus", "Mustang", "Edge", "Ranger", "Expedition", "Fusion", "Bronco"]
+                },
+                {
+                    "name": "BMW",
+                    "models": ["3 Series", "5 Series", "7 Series", "X3", "X5", "X7", "i3", "i8", "Z4", "4 Series"]
+                },
+                {
+                    "name": "Mercedes-Benz",
+                    "models": ["C-Class", "E-Class", "S-Class", "GLC", "GLE", "GLA", "GLB", "A-Class", "CLA", "G-Class"]
+                },
+                {
+                    "name": "Audi",
+                    "models": ["A3", "A4", "A6", "Q3", "Q5", "Q7", "Q8", "e-tron", "TT", "R8"]
+                },
+                {
+                    "name": "Chevrolet",
+                    "models": ["Silverado", "Equinox", "Malibu", "Tahoe", "Suburban", "Traverse", "Camaro", "Colorado", "Blazer", "Bolt"]
+                },
+                {
+                    "name": "Nissan",
+                    "models": ["Altima", "Sentra", "Rogue", "Pathfinder", "Frontier", "Titan", "Murano", "Maxima", "Versa", "Kicks"]
+                }
+            ]
+        };
+
+        // DOM Elements
+        const vehiclesContainer = document.getElementById('vehicles-container');
+        const makesContainer = document.getElementById('makes-container');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const navLinks = document.querySelectorAll('nav a');
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Display vehicles based on status filter
+        function displayVehicles(filter = 'all') {
+            vehiclesContainer.innerHTML = '';
             
-            branches.forEach(branch => {
-                const marker = new google.maps.marker.AdvancedMarkerElement({
-                    position: branch.position,
-                    map: map,
-                    title: branch.title
-                });
-                
-                // Add info window for each marker
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
-                        <div style="padding: 10px;">
-                            <h3 style="margin: 0 0 10px; color: #003884;">${branch.title}</h3>
-                            <p style="margin: 0;">${branch.address}</p>
+            vehiclesData.vehicles.forEach(vehicle => {
+                if (filter === 'all' || vehicle.status === filter) {
+                    const vehicleCard = document.createElement('div');
+                    vehicleCard.classList.add('vehicle-card');
+                    
+                    const statusClass = vehicle.status === 'in-stock' ? 'status-instock' : 'status-comingsoon';
+                    const statusText = vehicle.status === 'in-stock' ? 'In Stock' : 'Coming Soon';
+                    
+                    vehicleCard.innerHTML = `
+                        <div class="vehicle-image">
+                            <img src="${vehicle.image}" alt="${vehicle.make} ${vehicle.model}">
                         </div>
-                    `
-                });
+                        <div class="vehicle-info">
+                            <span class="status-badge ${statusClass}">${statusText}</span>
+                            <h3>${vehicle.year} ${vehicle.make} ${vehicle.model}</h3>
+                            <div class="vehicle-details">
+                                <span><i class="fas fa-road"></i> ${vehicle.mileage}</span>
+                                <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            </div>
+                            <div class="vehicle-price">$${vehicle.price.toLocaleString()}</div>
+                            <a href="#contact" class="btn">Inquire Now</a>
+                        </div>
+                    `;
+                    
+                    vehiclesContainer.appendChild(vehicleCard);
+                }
+            });
+        }
+
+        // Display parts makes and models
+        function displayParts() {
+            makesContainer.innerHTML = '';
+            
+            partsData.makes.forEach(make => {
+                const makeCard = document.createElement('div');
+                makeCard.classList.add('make-card');
                 
-                marker.addListener('click', () => {
-                    infoWindow.open(map, marker);
+                makeCard.innerHTML = `
+                    <div class="make-header">
+                        <h3>${make.name}</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="models-list">
+                        <ul>
+                            ${make.models.map(model => `<li>${model}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                
+                makesContainer.appendChild(makeCard);
+            });
+            
+            // Add event listeners to make headers
+            const makeHeaders = document.querySelectorAll('.make-header');
+            makeHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+                    header.nextElementSibling.classList.toggle('active');
                 });
             });
         }
 
-        // Gallery functionality
-        let currentVehicle = null;
-        let currentSlideIndex = 0;
+        // Initialize the page with all vehicles and parts
+        displayVehicles();
+        displayParts();
 
-        function openGallery(vehicleId) {
-            // Find the vehicle with matching ID
-            const vehicle = vehiclesData.find(v => v.id === vehicleId);
-            if (!vehicle || !vehicle.images || vehicle.images.length === 0) return;
-            
-            currentVehicle = vehicle;
-            currentSlideIndex = 0;
-            
-            const gallerySlides = document.getElementById('gallerySlides');
-            gallerySlides.innerHTML = '';
-            
-            // Create slides for each image
-            vehicle.images.forEach((image, index) => {
-                const slide = document.createElement('div');
-                slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
-                slide.innerHTML = `<img src="${image}" class="gallery-image" alt="${vehicle.make} ${vehicle.model}">`;
-                gallerySlides.appendChild(slide);
+        // Add event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get filter value and display vehicles
+                const filter = button.getAttribute('data-filter');
+                displayVehicles(filter);
             });
-            
-            // Show the gallery modal
-            document.getElementById('galleryModal').style.display = 'block';
-        }
+        });
 
-        function closeGallery() {
-            document.getElementById('galleryModal').style.display = 'none';
-            currentVehicle = null;
-            currentSlideIndex = 0;
-        }
-
-        function changeSlide(n) {
-            if (!currentVehicle) return;
-            
-            const slides = document.querySelectorAll('.gallery-slide');
-            if (slides.length === 0) return;
-            
-            // Hide current slide
-            slides[currentSlideIndex].classList.remove('active');
-            
-            // Calculate new slide index
-            currentSlideIndex += n;
-            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
-            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
-            
-            // Show new slide
-            slides[currentSlideIndex].classList.add('active');
-        }
-
-        // Global variables to store data
-        let vehiclesData = [];
-
-        // Load all data when the page is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load parts data
-            loadJSON('data/parts.json')
-                .then(data => {
-                    displayParts(data.parts);
-                });
-
-            // Load vehicles data
-            loadJSON('data/vehicles.json')
-                .then(data => {
-                    vehiclesData = data.vehicles;
-                    displayVehicles(data.vehicles);
-                });
-
-            // Load contact data
-            loadJSON('data/contact.json')
-                .then(data => {
-                    displayContact(data);
-                });
-
-            // Setup gallery event listeners
-            document.getElementById('closeGallery').addEventListener('click', closeGallery);
-            document.getElementById('galleryPrev').addEventListener('click', () => changeSlide(-1));
-            document.getElementById('galleryNext').addEventListener('click', () => changeSlide(1));
-            
-            // Close gallery when clicking outside the image
-            document.getElementById('galleryModal').addEventListener('click', function(e) {
-                if (e.target === this) closeGallery();
-            });
-
-            // Admin panel functionality
-            const adminToggle = document.getElementById('adminToggle');
-            const adminPanel = document.getElementById('adminPanel');
-            const closeAdmin = document.getElementById('closeAdmin');
-            const logoUpload = document.getElementById('logoUpload');
-            const logoPreview = document.getElementById('logoPreview');
-            
-            // Toggle admin panel
-            adminToggle.addEventListener('click', function() {
-                adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
-            });
-            
-            // Close admin panel
-            closeAdmin.addEventListener('click', function() {
-                adminPanel.style.display = 'none';
-            });
-            
-            // Handle logo upload
-            logoUpload.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const logoDataUrl = e.target.result;
-                        // Preview the logo
-                        logoPreview.innerHTML = `<img src="${logoDataUrl}" alt="Logo Preview">`;
-                        // Save to localStorage
-                        localStorage.setItem('starcarsLogo', logoDataUrl);
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-            
-            // Simulate saving changes
-            document.querySelector('.btn-save').addEventListener('click', function() {
-                alert('Changes saved successfully! (This is a demo - in a real application, changes would be saved to a database)');
-                adminPanel.style.display = 'none';
-            });
-            
-            // Keyboard shortcut to open admin panel (Ctrl+Alt+A)
-            document.addEventListener('keydown', function(e) {
-                if (e.ctrlKey && e.altKey && e.key === 'a') {
+        // Add event listeners to nav links for filtering
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('data-filter')) {
                     e.preventDefault();
-                    adminPanel.style.display = 'block';
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    link.classList.add('active');
+                    
+                    // Get filter value and display vehicles
+                    const filter = link.getAttribute('data-filter');
+                    displayVehicles(filter);
+                    
+                    // Scroll to vehicles section
+                    document.getElementById('vehicles').scrollIntoView({ behavior: 'smooth' });
                 }
             });
-            
-            // Keyboard navigation for gallery
-            document.addEventListener('keydown', function(e) {
-                if (document.getElementById('galleryModal').style.display === 'block') {
-                    if (e.key === 'Escape') closeGallery();
-                    if (e.key === 'ArrowLeft') changeSlide(-1);
-                    if (e.key === 'ArrowRight') changeSlide(1);
-                }
+        });
+
+        // Mobile nav toggle
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Close mobile nav when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
             });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
         });
     </script>
 </body>
 </html>
-
-
-
