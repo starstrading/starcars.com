@@ -1,193 +1,81 @@
 {
-  "parts": [
+  "makes": [
     {
-      "id": 1,
-      "make": "TOYOTA",
-      "models": [
-        "2002-2013 Allion & Premio",
-        "2006-2016 Axio & Fielder Wagon",
-        "2005-2010 I.S.T/ITZ",
-        "1999-2005 Raum",
-        "2012-2017 Vitz",
-        "2002-2005 Spacio",
-        "2010 TownAce/LiteAce",
-        "2008-2012 Hiace/Pitbull",
-        "2000-2006 Ist",
-        "2008-2015 Crown",
-        "2002-2007 Wish",
-        "2010-2015 Prius",
-        "2006-2013 Rush",
-        "2005-2012 Passo",
-        "2008-2016 Voxy/Noah"
-      ]
+      "name": "Toyota",
+      "models": ["Corolla", "Camry", "RAV4", "Highlander", "Tacoma", "Tundra", "Sienna", "4Runner", "Prius", "Avalon", "Hilux", "Fortuner", "Land Cruiser", "Hiace", "Yaris"]
     },
     {
-      "id": 2,
-      "make": "NISSAN",
-      "models": [
-        "2007-2017 Tiida",
-        "2013-2020 Note",
-        "2007-2014 X-Trail",
-        "2008-2013 Serena",
-        "2014-2020 Sylphy",
-        "2010-2017 March",
-        "2005-2013 Wingroad",
-        "2008-2014 Lafesta",
-        "2010-2017 Juke",
-        "2004-2012 Tiida Latio",
-        "2007-2013 Dualis",
-        "2012-2019 NV200",
-        "2002-2008 March",
-        "2013-2020 Dayz",
-        "2008-2015 Elgrand"
-      ]
+      "name": "Honda",
+      "models": ["Civic", "Accord", "CR-V", "Pilot", "Odyssey", "HR-V", "Fit", "Ridgeline", "Passport", "Insight", "City", "Jazz", "BR-V", "Brio", "Mobilio"]
     },
     {
-      "id": 3,
-      "make": "HONDA",
-      "models": [
-        "2006-2015 Civic",
-        "2008-2017 Accord",
-        "2007-2016 CR-V",
-        "2011-2020 Fit/Jazz",
-        "2004-2014 Airwave",
-        "2009-2018 Freed",
-        "2002-2008 Stream",
-        "2013-2020 Vezel",
-        "2005-2013 Edix",
-        "2008-2015 Insight",
-        "2012-2018 N-WGN",
-        "2004-2010 Mobilio",
-        "2007-2014 Stepwgn",
-        "2010-2017 CR-Z",
-        "2003-2013 Odyssey"
-      ]
+      "name": "Ford",
+      "models": ["F-150", "Escape", "Explorer", "Focus", "Mustang", "Edge", "Ranger", "Expedition", "Fusion", "Bronco", "EcoSport", "Everest", "Figo", "Endeavour", "Territory"]
     },
     {
-      "id": 4,
-      "make": "MAZDA",
-      "models": [
-        "2008-2016 Axela",
-        "2012-2019 Demio",
-        "2007-2013 Premacy",
-        "2013-2020 CX-5",
-        "2002-2008 Familia",
-        "2010-2017 Biante",
-        "2005-2012 Verisa",
-        "2012-2019 CX-9",
-        "2003-2008 Atenza",
-        "2015-2020 Flair",
-        "2008-2015 MPV",
-        "2011-2018 Mazda2",
-        "2002-2007 Protege",
-        "2013-2020 Mazda6",
-        "2005-2012 Mazda5"
-      ]
+      "name": "BMW",
+      "models": ["3 Series", "5 Series", "7 Series", "X3", "X5", "X7", "i3", "i8", "Z4", "4 Series", "X1", "X6", "2 Series", "8 Series", "X4"]
     },
     {
-      "id": 5,
-      "make": "MITSUBISHI",
-      "models": [
-        "2007-2017 Lancer",
-        "2012-2020 Outlander",
-        "2003-2013 Grandis",
-        "2010-2019 ASX",
-        "2004-2014 Colt",
-        "2007-2016 Delica",
-        "2013-2020 Attrage",
-        "2006-2013 Colt Plus",
-        "2012-2019 Mirage",
-        "2002-2007 Airtrek",
-        "2008-2016 Lancer Evolution",
-        "2014-2020 Outlander Sport",
-        "2005-2012 Zinger",
-        "2010-2017 Pajero Sport",
-        "2002-2006 Space Gear"
-      ]
+      "name": "Mercedes-Benz",
+      "models": ["C-Class", "E-Class", "S-Class", "GLC", "GLE", "GLA", "GLB", "A-Class", "CLA", "G-Class", "CLS", "GLS", "B-Class", "V-Class", "AMG GT"]
     },
     {
-      "id": 6,
-      "make": "SUZUKI",
-      "models": [
-        "2005-2014 Swift",
-        "2010-2019 Alto",
-        "2007-2016 SX4",
-        "2013-2020 Celerio",
-        "2008-2017 Grand Vitara",
-        "2011-2020 Jimny",
-        "2006-2015 Wagon R",
-        "2014-2020 Ignis",
-        "2008-2016 Splash",
-        "2012-2019 Ertiga",
-        "2004-2014 APV",
-        "2015-2020 Baleno",
-        "2002-2008 Aerio",
-        "2010-2017 Kizashi",
-        "2003-2010 Liana"
-      ]
+      "name": "Audi",
+      "models": ["A3", "A4", "A6", "Q3", "Q5", "Q7", "Q8", "e-tron", "TT", "R8", "A5", "A7", "A8", "Q2", "RS6"]
     },
     {
-      "id": 7,
-      "make": "VOLKSWAGEN",
-      "models": [
-        "2009-2017 Golf",
-        "2011-2018 Passat",
-        "2008-2016 Tiguan",
-        "2012-2020 Polo",
-        "2007-2015 Jetta",
-        "2010-2018 Touran",
-        "2013-2020 Beetle",
-        "2015-2020 Golf GTI",
-        "2006-2014 Eos",
-        "2011-2017 Scirocco",
-        "2008-2015 Touareg",
-        "2013-2020 Golf R",
-        "2004-2010 Phaeton",
-        "2010-2017 Amarok",
-        "2002-2008 Bora"
-      ]
+      "name": "Chevrolet",
+      "models": ["Silverado", "Equinox", "Malibu", "Tahoe", "Suburban", "Traverse", "Camaro", "Colorado", "Blazer", "Bolt", "Cruze", "Spark", "Trax", "Impala", "Sonic"]
     },
     {
-      "id": 8,
-      "make": "BMW",
-      "models": [
-        "2011-2019 3 Series",
-        "2010-2017 5 Series",
-        "2009-2015 X5",
-        "2012-2018 X3",
-        "2008-2016 1 Series",
-        "2013-2020 4 Series",
-        "2014-2020 X1",
-        "2015-2020 7 Series",
-        "2006-2013 X6",
-        "2011-2018 6 Series",
-        "2013-2020 i3",
-        "2004-2010 X3",
-        "2012-2019 X4",
-        "2008-2015 Z4",
-        "2010-2017 5 Series GT"
-      ]
+      "name": "Nissan",
+      "models": ["Altima", "Sentra", "Rogue", "Pathfinder", "Frontier", "Titan", "Murano", "Maxima", "Versa", "Kicks", "X-Trail", "Navara", "Juke", "Leaf", "370Z"]
     },
     {
-      "id": 9,
-      "make": "AUDI",
-      "models": [
-        "2011-2018 A4",
-        "2015-2020 A3",
-        "2006-2015 Q7",
-        "2011-2017 A6",
-        "2008-2016 Q5",
-        "2010-2018 A5",
-        "2012-2020 A1",
-        "2015-2020 Q3",
-        "2007-2014 A8",
-        "2011-2018 TT",
-        "2013-2020 RS7",
-        "2004-2011 A6",
-        "2012-2019 Allroad",
-        "2008-2016 R8",
-        "2010-2017 Q5 Hybrid"
-      ]
+      "name": "Hyundai",
+      "models": ["Tucson", "Santa Fe", "Elantra", "Sonata", "Kona", "Venue", "Palisade", "Accent", "Veloster", "Ioniq", "Creta", "i20", "i10", "Grand i10", "Xcent"]
+    },
+    {
+      "name": "Kia",
+      "models": ["Sportage", "Sorento", "Telluride", "Forte", "Rio", "Optima", "Soul", "Stinger", "Carnival", "Niro", "Seltos", "Sonet", "Picanto", "Cerato", "K5"]
+    },
+    {
+      "name": "Volkswagen",
+      "models": ["Golf", "Jetta", "Passat", "Tiguan", "Atlas", "Arteon", "Polo", "T-Roc", "T-Cross", "Amarok", "Beetle", "Touran", "Sharan", "Caddy", "Touareg"]
+    },
+    {
+      "name": "Mazda",
+      "models": ["CX-5", "CX-9", "CX-30", "Mazda3", "Mazda6", "MX-5 Miata", "CX-3", "Mazda2", "BT-50", "CX-8", "Mazda5", "RX-8", "MPV", "626", "929"]
+    },
+    {
+      "name": "Subaru",
+      "models": ["Outback", "Forester", "Crosstrek", "Impreza", "Legacy", "WRX", "Ascent", "BRZ", "Baja", "Tribeca", "SVX", "Justy", "Leone", "Domingo", "Rex"]
+    },
+    {
+      "name": "Jeep",
+      "models": ["Wrangler", "Grand Cherokee", "Cherokee", "Compass", "Renegade", "Gladiator", "Wagoneer", "Liberty", "Patriot", "Commander", "CJ", "Willys", "FC", "Forward Control", "J-Series"]
+    },
+    {
+      "name": "Volvo",
+      "models": ["XC90", "XC60", "XC40", "S90", "S60", "V90", "V60", "V40", "C40", "XC70", "S80", "V70", "C30", "850", "240"]
     }
+  ],
+  "partCategories": [
+    "Engine Parts",
+    "Transmission Parts",
+    "Brake System",
+    "Suspension & Steering",
+    "Electrical Parts",
+    "Cooling System",
+    "Exhaust System",
+    "Fuel System",
+    "Body Parts",
+    "Interior Parts",
+    "Lighting",
+    "Filters",
+    "Belts & Hoses",
+    "Ignition System",
+    "Wheels & Tires"
   ]
 }
