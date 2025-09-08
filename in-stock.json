@@ -3,19 +3,31 @@
     {
       "id": 1,
       "make": "Toyota",
-      "model": "Corolla",
-      "year": 2020,
-      "price": 18500,
-      "mileage": "45,000 km",
+      "model": "Fielder Wagon",
+      "year": 2014,
+      "price": 250000000,
+      "mileage": "198,429 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
       "images": [
-        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_e5a68f.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_822856.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_66aded.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_c5e266.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_2b1830.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_d49ae6.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_6ba7b5.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_c28e27.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_60492f.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_bd05fc.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_92c5f1.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_58dfd3.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_bead9a.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_51e249.JPG",
+        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_24b468.jpg"
       ],
       "status": "in-stock",
-      "description": "Well-maintained one owner vehicle with full service history."
+      "description": "Well-maintained. one owner vehicle with full service history."
     },
     {
       "id": 2,
