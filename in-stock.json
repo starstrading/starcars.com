@@ -10,24 +10,14 @@
       "fuelType": "Petrol",
       "transmission": "Automatic",
       "images": [
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_e5a68f.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_822856.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_66aded.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_c5e266.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_2b1830.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_d49ae6.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_6ba7b5.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_c28e27.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_60492f.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_bd05fc.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_92c5f1.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_58dfd3.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_bead9a.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_51e249.JPG",
-        "https://image-cdn.beforward.jp/large/202507/11860646/BY708349_24b468.jpg"
+        "images/image1-2014fielder1nz6813484fa.jpg",
+        "images/image2-2014fielder1nz6813484fa.jpg",
+        "images/image3-2014fielder1nz6813484fa.jpg",
+        "images/image4-2014fielder1nz6813484fa.jpg",
+        "images/image5-2014fielder1nz6813484fa.jpg"
       ],
       "status": "in-stock",
-      "description": "Well-maintained. one owner vehicle with full service history."
+      "description": "Well-maintained one owner vehicle with full service history."
     },
     {
       "id": 2,
@@ -39,148 +29,12 @@
       "fuelType": "Petrol",
       "transmission": "Automatic",
       "images": [
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+        "images/image1-2019crv2kdh83475gfd.jpg",
+        "images/image2-2019crv2kdh83475gfd.jpg",
+        "images/image3-2019crv2kdh83475gfd.jpg"
       ],
       "status": "in-stock",
       "description": "Low mileage SUV with all features including navigation and leather seats."
-    },
-    {
-      "id": 3,
-      "make": "Ford",
-      "model": "Ranger",
-      "year": 2021,
-      "price": 28900,
-      "mileage": "28,500 km",
-      "fuelType": "Diesel",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Powerful diesel engine with tow package and canopy included."
-    },
-    {
-      "id": 4,
-      "make": "BMW",
-      "model": "3 Series",
-      "year": 2020,
-      "price": 31500,
-      "mileage": "28,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Luxury sedan with premium package and low mileage."
-    },
-    {
-      "id": 5,
-      "make": "Mazda",
-      "model": "CX-5",
-      "year": 2021,
-      "price": 26900,
-      "mileage": "22,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Popular SUV model with excellent fuel economy and safety features."
-    },
-    {
-      "id": 6,
-      "make": "Mercedes-Benz",
-      "model": "C-Class",
-      "year": 2018,
-      "price": 28900,
-      "mileage": "52,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1568605114967-8135bbc322f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Luxury vehicle with premium features at an affordable price."
-    },
-    {
-      "id": 7,
-      "make": "Hyundai",
-      "model": "Tucson",
-      "year": 2022,
-      "price": 24900,
-      "mileage": "15,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Nearly new SUV with remaining manufacturer warranty."
-    },
-    {
-      "id": 8,
-      "make": "Volkswagen",
-      "model": "Golf",
-      "year": 2019,
-      "price": 19900,
-      "mileage": "38,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Popular hatchback with excellent fuel economy and practicality."
-    },
-    {
-      "id": 9,
-      "make": "Nissan",
-      "model": "Qashqai",
-      "year": 2020,
-      "price": 22500,
-      "mileage": "34,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Reliable crossover with spacious interior and modern features."
-    },
-    {
-      "id": 10,
-      "make": "Kia",
-      "model": "Sportage",
-      "year": 2021,
-      "price": 23900,
-      "mileage": "26,000 km",
-      "fuelType": "Petrol",
-      "transmission": "Automatic",
-      "images": [
-        "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-      ],
-      "status": "in-stock",
-      "description": "Well-equipped SUV with excellent warranty and service history."
     }
   ]
 }
