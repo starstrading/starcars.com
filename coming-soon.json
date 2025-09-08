@@ -9,7 +9,11 @@
       "mileage": "12,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Luxury SUV arriving next week. Low mileage and premium features.",
       "expectedArrival": "2023-10-15"
@@ -23,7 +27,11 @@
       "mileage": "18,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Powerful pickup truck with tow package and premium interior.",
       "expectedArrival": "2023-10-18"
@@ -37,7 +45,11 @@
       "mileage": "8,000 km",
       "fuelType": "Electric",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Fully electric vehicle with autopilot and premium connectivity.",
       "expectedArrival": "2023-10-22"
@@ -51,7 +63,11 @@
       "mileage": "25,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Iconic 4x4 vehicle with off-road package and low mileage.",
       "expectedArrival": "2023-10-25"
@@ -65,7 +81,11 @@
       "mileage": "20,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "All-wheel drive wagon with excellent safety features and space.",
       "expectedArrival": "2023-10-28"
@@ -79,7 +99,11 @@
       "mileage": "35,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1568605114967-8135bbc322f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1568605114967-8135bbc322f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Luxury SUV with premium features and impeccable service history.",
       "expectedArrival": "2023-11-02"
@@ -93,7 +117,11 @@
       "mileage": "22,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=c crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Safety-focused SUV with premium interior and technology features.",
       "expectedArrival": "2023-11-05"
@@ -107,7 +135,11 @@
       "mileage": "30,000 km",
       "fuelType": "Diesel",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Premium SUV with off-road capabilities and luxurious interior.",
       "expectedArrival": "2023-11-10"
@@ -121,7 +153,11 @@
       "mileage": "28,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Sports SUV with performance package and premium features.",
       "expectedArrival": "2023-11-15"
@@ -135,7 +171,11 @@
       "mileage": "24,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "coming-soon",
       "description": "Full-size pickup truck with tow package and crew cab.",
       "expectedArrival": "2023-11-20"
