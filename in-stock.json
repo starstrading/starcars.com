@@ -9,7 +9,11 @@
       "mileage": "45,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Well-maintained one owner vehicle with full service history."
     },
@@ -22,7 +26,11 @@
       "mileage": "32,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Low mileage SUV with all features including navigation and leather seats."
     },
@@ -35,7 +43,11 @@
       "mileage": "28,500 km",
       "fuelType": "Diesel",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1567899378494-47b22b6a7515?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Powerful diesel engine with tow package and canopy included."
     },
@@ -48,7 +60,11 @@
       "mileage": "28,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Luxury sedan with premium package and low mileage."
     },
@@ -61,7 +77,11 @@
       "mileage": "22,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Popular SUV model with excellent fuel economy and safety features."
     },
@@ -74,7 +94,11 @@
       "mileage": "52,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1568605114967-8135bbc322f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1568605114967-8135bbc322f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Luxury vehicle with premium features at an affordable price."
     },
@@ -87,7 +111,11 @@
       "mileage": "15,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Nearly new SUV with remaining manufacturer warranty."
     },
@@ -100,7 +128,11 @@
       "mileage": "38,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1580274437636-1c384e567539?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Popular hatchback with excellent fuel economy and practicality."
     },
@@ -113,7 +145,11 @@
       "mileage": "34,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Reliable crossover with spacious interior and modern features."
     },
@@ -126,7 +162,11 @@
       "mileage": "26,000 km",
       "fuelType": "Petrol",
       "transmission": "Automatic",
-      "image": "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1593941707882-a5b2d87c9bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+        "https://images.unsplash.com/photo-1549399542-7e82138d43aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      ],
       "status": "in-stock",
       "description": "Well-equipped SUV with excellent warranty and service history."
     }
